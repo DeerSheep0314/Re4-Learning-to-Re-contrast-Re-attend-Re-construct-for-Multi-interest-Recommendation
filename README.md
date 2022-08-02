@@ -11,6 +11,31 @@
 
 Will pick up the code refracting procedure if we have a time table. Please kindly wait for the release.
 
+## Prerequisites
+
+- Python 3
+- PyTorch 1.8.1
+- TensorFlow 2.x
+
+## Getting Started
+
+### Installation
+
+- Install PyTorch 1.8.1
+- Install TensorFlow 2.x
+- Clone this repository `git clone https://github.com/DeerSheep0314/Re4-Learning-to-Re-contrast-Re-attend-Re-construct-for-Multi-interest-Recommendation.git`.
+
+### Dataset
+
+- Amazon-book dataset can be downloaded through:
+  - Microsoft OneDrive link : 
+
+### Running
+
+To run the code, You can use `python src/model.py --gpu {gpu_num} --thre {thre_num} --data {dataset_name} --ct_lambda {ct_weight} --cs_lambda {cs_weight} --att_lambda {att_weight} --numin {num_interests}` to train the R4 model on a specific dataset. You can set the above hyperparameters here, see the code for other hyperparameters.
+
+For example, you can use `python src/model.py --gpu 0 --thre -1 --numin 8 --data book --ct_lambda 0.1 --cs_lambda 0.1 --att_lambda 0.001` to train R4 model on Amazon-book dataset.
+
 ## Bibtex
 ```
 @inproceedings{DBLP:conf/www/ZhangYYLFZC022,
